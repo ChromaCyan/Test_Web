@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home - Welcome</title>
     <style>
         * {
             margin: 0;
@@ -15,32 +15,124 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f4f4f4;
+        }
+        
+        header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            display: inline-block;
+            margin: 0 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #764ba2;
         }
         
         .container {
-            background: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 600px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
         
-        h1 {
+        section {
+            background: white;
+            padding: 50px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
             color: #667eea;
-            margin-bottom: 20px;
-            font-size: 2.5em;
+            margin-bottom: 25px;
+            font-size: 2.2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
         }
         
         p {
-            color: #666;
-            margin-bottom: 30px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: 600;
             font-size: 1.1em;
+            margin: 20px 10px 0 0;
+        }
+        
+        .cta-button:hover {
+            background-color: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .feature-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .feature-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
         }
         
         .button-group {
@@ -48,32 +140,76 @@
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 25px;
         }
         
-        a {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #667eea;
+        footer {
+            background: #333;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: 500;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
         }
         
-        a:hover {
-            background-color: #764ba2;
+        footer a {
+            color: #667eea;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to Our Site</h1>
+        <p>Creating amazing digital experiences for everyone</p>
+    </header>
+    
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
     <div class="container">
-        <h1>Welcome</h1>
-        <p>This is a simple home page built with HTML and CSS.</p>
-        <div class="button-group">
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </div>
+        <section>
+            <h2>About Us</h2>
+            <p>We are dedicated to providing innovative solutions and exceptional service. Our team combines creativity, technical expertise, and a passion for excellence to deliver results that exceed expectations.</p>
+            <p>Whether you're a startup looking to establish your online presence or an established company seeking to grow, we have the expertise and experience to help you succeed.</p>
+            <a href="about.html" class="cta-button">Learn More About Us</a>
+        </section>
+        
+        <section>
+            <h2>What We Offer</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3>🎨 Web Design</h3>
+                    <p>Beautiful, modern designs that captivate your audience and reflect your brand's unique identity.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>💻 Web Development</h3>
+                    <p>Robust development solutions using cutting-edge technologies and best practices.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Seamless experiences across all devices - desktop, tablet, and mobile.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Why Choose Us?</h2>
+            <p><strong>Experience:</strong> With years of industry experience, our team delivers professional solutions tailored to your needs.</p>
+            <p><strong>Quality:</strong> We never compromise on quality. Every project is handled with meticulous attention to detail.</p>
+            <p><strong>Support:</strong> Our dedicated support team is always available to assist and ensure your success.</p>
+            <p><strong>Innovation:</strong> We stay ahead of the curve with the latest technologies and industry trends.</p>
+            <div class="button-group">
+                <a href="about.html" class="cta-button">Explore Our Work</a>
+                <a href="#contact" class="cta-button" style="background-color: #764ba2;">Get In Touch</a>
+            </div>
+        </section>
     </div>
+    
+    <footer>
+        <p>&copy; 2026 Your Company. All rights reserved. | <a href="about.html">About</a> | <a href="#contact">Contact</a></p>
+    </footer>
 </body>
 </html>
